@@ -1,16 +1,17 @@
  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>
-		IIITA HACKS
+		IIITA CART
 	</title>
-	<link rel="stylesheet" type="text/css" href="hacks.css">
+	<link rel="stylesheet" type="text/css" href="cart.css">
 </head>
 <body>
-<div class="bla">a</div>
 <!-- header start here -->
+<div class="fix">
  	<div class="header">
-
+	<!--<div class="bla">a</div>-->
 		<div class="heading">
 		PROJECT HACKS
 		</div>
@@ -23,80 +24,73 @@
 			<li><a href="#">Gallery</a></li>
 		</ul>
 		</div>
-	</div>
+	</div></div><br><br>
 <!-- header ends here -->
-	<!-- slider starts here -->
+<!-- slider starts here -->
 	<div class="slider"><br><br><br>
-	<img class="slide" src="http://www.annaunivedu.net/wp-content/uploads/2014/05/your-queries.jpg" >
-	<img class="slide" src="https://www.annuity.org/wp-content/themes/annuity.org/images/gfx/selling-payments/selling-reasons.png"  >
-	<img class="slide" src="http://www.smarttechtoday.com/wp-content/uploads/2015/10/Top-Reasons-Why-Online-Shopping-Is-On-Rise-In-India.jpg" >
-	<img class="slide" src="http://lerablog.org/wp-content/uploads/2013/05/online-shop.jpg" >
-		<a  class="but" onclick="pa(-1)" style="position:absolute; left: 23%; top:27%;">&lt;</a>
-		<a  class="but" onclick="pa(1)" style="position:absolute; right: 25%; top:27%;"> &gt;</a>
-	</div><br><br>
+	<img class="slide" src=" a.png" >
+	<img class="slide" src=" b.jpg"  >
+ 	<img class="slide" src=" c.jpg" >
+ 	</div><br><br>
 	<!-- slider ends here -->
 	<!-- search box -->
 	<div class="search">
-		<input type="search" name="search">
+		<input type="search" name="search" style="width: 30%;height:30px;" placeholder="search about products">
 		<button class="searchbutton">SEARCH</button>
 	</div>
-	<!-- context -->
-	<div class="context">
-	<h1 class="about"> ABOUT</h1>
-	<div class="ca">
+	<div class="hhh">
+		<h3 style="text-align:center; font-size:250%; color:white;">ABOUT</h3>		
+	</div>
+	 <!-- blocks-->
+	<div class="block">
 		<div class="block1">
 			<h3 style="text-align:center;">CARTING</h3>
-			<img class="cartimg" src="http://www.clker.com/cliparts/C/O/Q/Y/J/0/white-shopping-cart-md.png" alt="">
+			<img class="carting1" src="e.png" alt="" style="width:30%;">
 			<br><br><p>
 				Sell your unwanted stuff here by posting them here.
 			</p>
 			<button class="button">ADD YOUR PRODUCT</button><br>
-
-		</div>
 		</div>
 	<div class="block2">
 			<h3 style="text-align:center;"> SUGGESTION BOARD</h3>
-	<img class="discussionimg" src="https://tribulationsdunechomeuse.files.wordpress.com/2015/02/business-discussion.jpg" alt=""><br><br>
+	<img class="carting" src=" d.jpg" alt="" style="width:40%;"><br><br>
 		<p>
 			This place helps you to get best answer for any question in IIITA.It connects you to everything you want to know about IIITA such as subjects,books...
 		</p>
 		<button class="button">  POST YOUR QUESTION</button><br>
 	</div>
-	
 	</div>
 	<div class="trending">
-		<h3 style="text-align:center;"> TRENDING PRODUCTS</h3>
+		<h3 style="text-align:center;color:white;"> TRENDING PRODUCTS</h3>
 		<!-- slider starts here -->
 	<div class="slider1">
-	<img class="slide" src="http://www.annaunivedu.net/wp-content/uploads/2014/05/your-queries.jpg" alt="no"  >
-	<img class="slide" src="http://www.clker.com/cliparts/C/O/Q/Y/J/0/white-shopping-cart-md.png "  >
-	<img class="slide" src=" " >
-	<img class="slide" src=" " >
-		<a  class="but" onclick="pa(-1);" style="position:absolute; left: 12%; top:20%;">&lt;</a>
-		<a  class="but" onclick="pa(1);" style="position:absolute; right: 12%; top:20%;"> &gt;</a>
-	</div><br><br>
+	 
+	</div>
 	<!-- slider ends here -->
 	</div>
-	<!-- js -->
-<script>
-var Index = 1;
-showDivs(Index);
+	<!-- footer starts here -->
+	<div class="footer">
+		<div class="foo">
+			<h4>Powered by :</h4>
+			<h4>copyrights: &copy;</h4>
+		</div>
+		<div class="bla"></div>
+	</div>
+	<script>
+var myIndex = 0;
+carousel();
 
-function pa(n) {
-  showDivs(Index += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("slide");
-  if (n > x.length) {Index = 1 }    
-  if (n < 1) {Index = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[Index-1].style.display = "block";  
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slide");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script>
 </body>
 </html>
- 
